@@ -1,0 +1,101 @@
+total1=0
+total2=0
+total3=0
+type1=""
+type2=""
+
+print("=== CASHIER PROGRAM ===")
+name = input("Enter name ")
+print ("Costumer name:", name)
+print("")
+print ("FOOD MENU")
+    
+
+
+def order(i):
+        switcher={
+                1:'----Fried Rice 100----',
+                2:'----Beef noodle 120----',
+                3:'----Fried chicken 80----',
+                4:''
+             }
+        return switcher.get(i,"Enter your Order !")
+
+
+print("1. Fried Rice")
+print("2. Beef noodle")
+print("3. Fried chicken")
+print("4. None")
+number=int(input("Order: "))
+menu=order(number)
+print (menu)
+
+if number==1:
+    qty1= int(input("Qty : "))
+    total1=total1+qty1*100
+    print ("Total = ", total1)
+    type1=("Fried Rice")
+if number==2:
+    qty1= int(input("Qty : "))
+    total1=total1+qty1*120
+    print ("Total = ", total1)
+    type1=("Beef noodle")
+if number==3:
+    qty1= int(input("Qty : "))
+    total1=total1+qty1*80
+    print ("Total = ", total1)
+    type1=("Fried rice")
+
+def order(i):
+        switcher={
+                1:'----Ice tea 30----',
+                2:'----Milk tea 40----',
+                3:'----Coffee 30----',
+                4:''
+             }
+        return switcher.get(i,"Enter your order !")
+print("\n Beaverage Menu")
+print("1. Ice tea")
+print("2. Milk tea")
+print("3. Coffee")
+print("4. None")
+number=int(input("Enter your order: "))
+menu=order(number)
+print (menu)
+if number==1:
+    qty2= int(input("Qty : "))
+    total2=total2+(qty2*30)
+    print ("Total = ", total2)
+    type2=("Ice tea")
+if number==2:
+    qty2= int(input("Qty : "))
+    total2=total2+(qty2*40)
+    print ("Total = ", total2)
+    type2=("Milk tea")
+if number==3:
+    qty2= int(input("Qty : "))
+    total2=total2+(qty2*30)
+    print ("Total = ", total2)
+    type2=("Coffee")
+
+total3=total1+total2
+if total3==0:
+    print("COME AGAIN")
+
+if total3!=0:
+    print("=========================")
+    print("Total =",total3)    
+    money=int(input("\nCash: NTD."))    
+    print("\n=========================")
+    print("======= S T R U K =======")
+    print("=========================")
+    print ("=== Name    :",name)
+    print ("=== Order   :",qty1,type1)
+    print ("===          ",qty2,type2)
+    print ("=== Total   : NTD.",total3)
+    print ("=== Cash    : NTD.",money)
+    last=int(money-total3)
+    print ("=== Change  : NTD.",last)
+    print("=========================")
+    print("=========================")
+    
